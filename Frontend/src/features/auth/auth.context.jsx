@@ -5,8 +5,8 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
 
   return (
-    <AuthContext.Provide value={{ user, setUser, loading, setLoading }}>
+    <AuthContext.Provider value={{ user, setUser, loading, setLoading }}>
       {children}
-    </AuthContext.Provide>
+    </AuthContext.Provider>
   );
 };
