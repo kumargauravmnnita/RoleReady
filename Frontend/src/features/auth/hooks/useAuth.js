@@ -44,7 +44,8 @@ export const useAuth = () => {
       try {
         const data = await getMe();
         setUser(data.user);
-      } catch {
+      } catch (err) {
+      } finally {
         setLoading(false);
       }
     };
